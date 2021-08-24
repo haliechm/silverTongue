@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+/* .navbar {
+  background-color: #EBECED;
+} */
+
+.navbar {
+  position: sticky !important;
+  top: 0 !important;
+}
+
 .no-padding {
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -18,12 +27,13 @@
 }
 
 #main-page-background {
-  height: 88%;
+  height: 92%;
   width: 100%;
   /* background-image: url('../../silver-tongue/src/images/worldmap-background.png'); */
   /* background-color: #320669; */
-  background-color: #308552;
-  color: white;
+  /* background-color: #308552; */
+  /* color: white; */
+  color: #308552;
   font-size: 1.6rem;
   align-items: center;
   display: flex;
@@ -35,10 +45,12 @@
   width: 110%;
   /* top: 10%; */
   left: -100px;
-  opacity: 11%;
+  /* opacity: 11%; */
+  opacity: 24%;
   font-size: 1.2rem;
   text-align: left;
   z-index: 1;
+  color: #308552;
 }
 
 .main-page-button {
@@ -48,6 +60,7 @@
   font-weight: 800 !important;
   position: relative;
   z-index: 4;
+  border-radius: .8rem !important;
 }
 
 .sign-up-button {
@@ -59,12 +72,14 @@
 }
 
 #language-carousel {
-  background-color: #8AD1A6;
+  /* background-color: #8AD1A6; */
   width: 100%;
   position: absolute;
   bottom: 0;
-  height: 10%;
+  height: 8%;
   z-index: 2;
+  background-color: #EBECED;
+  /* background-color: #8ad1a6; */
   /* height: 15%; */
   /* position: absolute;
   top: 90%;

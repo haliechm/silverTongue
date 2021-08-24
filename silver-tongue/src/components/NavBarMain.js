@@ -20,23 +20,14 @@ export default function NavBarMain(props) {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar color="light" light expand="md" fixed>
-      <NavbarBrand href="/">wernix</NavbarBrand>
+    <Navbar color="dark" dark expand="md" fixed>
+      <NavbarBrand className="ml-3" href="/">WERNIX</NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="mr-auto" navbar>
-          {/* <NavItem>
-            <NavLink href="/components/">Components</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="https://github.com/reactstrap/reactstrap">
-              GitHub
-            </NavLink>
-          </NavItem> */}
         </Nav>
-        {/* <NavbarText>Simple Text</NavbarText> */}
         <UncontrolledDropdown>
-          <DropdownToggle nav caret>
+          <DropdownToggle nav caret style={{color: 'white'}}>
             Site Language: English
           </DropdownToggle>
           <DropdownMenu right>
