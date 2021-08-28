@@ -9,6 +9,7 @@
 .navbar {
   position: sticky !important;
   top: 0 !important;
+  z-index: 10;
 }
 
 .no-padding {
@@ -27,7 +28,7 @@
 }
 
 #main-page-background {
-  height: 92%;
+  height: 100%;
   width: 100%;
   /* background-image: url('../../silver-tongue/src/images/worldmap-background.png'); */
   /* background-color: #320669; */
@@ -46,7 +47,7 @@
   /* top: 10%; */
   left: -100px;
   /* opacity: 11%; */
-  opacity: 24%;
+  opacity: 25%;
   font-size: 1.2rem;
   text-align: left;
   z-index: 1;
@@ -84,4 +85,59 @@
   /* position: absolute;
   top: 90%;
   z-index: 2 */
+}
+
+.homepage-row{
+  margin: 0% 8% 4% 8% !important;
+  /* margin-left: 8% !important;
+  margin-right: 8% !important;
+  margin-bottom: 4%; */
+  border-bottom: 3px solid #8ad1a6;
+  align-items: center;
+
+}
+
+.wernix-features {
+  font-size: small;
+}
+
+/* .checkmark {
+ list-style-image: url('/src/images/checkmark-small.png');
+} */
+
+ul.no-bullet {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+li.checkmark {
+background: url('/src/images/checkmark-small.png') no-repeat left top;
+height: 54px;
+padding-left: 40px;
+padding-top: 4px;
+}
+
+li.arrow-small {
+background: url('/src/images/arrow-small.png') no-repeat left 29px;
+/* height: 54px; */
+padding-left: 40px;
+padding-top: 29px;
+display: block;
+}
+
+.wernix-features-col {
+  text-align: left;
+}
+
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    height: 50vh;
+    overflow-y: auto;
+}
+
+.up-front {
+  z-index: 10;
 }

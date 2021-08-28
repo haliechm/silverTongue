@@ -20,6 +20,8 @@ export default function NavBarMain(props) {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
+    // navbar for main homepage
+    // need to add buttons popup when scroll past top half of page
     <Navbar color="dark" dark expand="md" fixed>
       <NavbarBrand className="ml-3" href="/">WERNIX</NavbarBrand>
       <NavbarToggler onClick={toggle} />
@@ -36,8 +38,6 @@ export default function NavBarMain(props) {
             <DropdownItem>Spanish</DropdownItem>
             <DropdownItem>Italian</DropdownItem>
             <DropdownItem>Russian</DropdownItem>
-            {/* <DropdownItem divider />
-            <DropdownItem>Reset</DropdownItem> */}
           </DropdownMenu>
         </UncontrolledDropdown>
       </Collapse>

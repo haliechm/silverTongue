@@ -1,3 +1,4 @@
+// this probably could be done in a better way ->  these are just the words that  float across the homepage screen
 const data = {
  languageTranslationsArray : 
   ["language",

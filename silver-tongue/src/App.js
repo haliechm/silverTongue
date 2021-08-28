@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
-import {Home, Login} from "./components";
+import {Home, Login, Footer} from "./components";
 
 function App() {
   return (
