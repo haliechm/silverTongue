@@ -70,6 +70,8 @@
 
 .account-button {
   background-color: #1d5232 !important;
+  border-color: transparent !important;
+  color: white !important;
 }
 
 #language-carousel {

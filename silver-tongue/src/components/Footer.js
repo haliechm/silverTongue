@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 const FooterPagePro = () => {
   return (
-    <MDBFooter className="page-footer font-small pt-4 mt-4 bg-dark">
+    <MDBFooter className="page-footer font-small pt-4 mt-4 bg-dark text-light">
       {/* <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
           &copy; {new Date().getFullYear()} Copyright:{" "}
@@ -13,13 +14,13 @@ const FooterPagePro = () => {
       <MDBContainer fluid className="text-center text-md-left">
         <div className="text-center py-3">
           <ul className="list-unstyled list-inline mb-0">
-            <li className="list-inline-item">
+            <li className="list-inline-item mr-4">
               <h4>Practice speaking in other langauges today!</h4>
             </li>
             <li className="list-inline-item">
-              <a href="#!" className="btn btn-danger btn-rounded">
+              <Link className="btn btn-light btn-rounded account-button">
                 Sign up
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -27,51 +28,39 @@ const FooterPagePro = () => {
         <MDBRow>
           <MDBCol md="6">
             <h5 className="mb-4 mt-3 font-weight-bold">
-              WERNIX &copy; 2021 wernix area
+              &copy; 2021 WERNIX AREA
             </h5>
+
             <p>
-              Here you can use rows and columns here to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Wernix Area strives to create a way for people all over the world
+              to communicate and learn from one another.
             </p>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
+          <MDBCol md="3"></MDBCol>
           <MDBCol md="3">
-            <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">Links</h5>
+            <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
+              More Information
+            </h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#!">Link 1</a>
+                <a href="#!">Contact Us</a>
               </li>
               <li>
-                <a href="#!">Link 2</a>
+                <a href="#!">About Us</a>
               </li>
               <li>
-                <a href="#!">Link 3 klj kl lkj kl</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
+                <Link to="/login">Log in to your Account</Link>
               </li>
             </ul>
           </MDBCol>
-          <hr className="clearfix w-100 d-md-none" />
-          <MDBCol md="3">
-            <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">Links</h5>
-            <ul className="list-unstyled">
-              <li>
-                <a href="#!">Link 1 kj k jkjjkj lkkj</a>
-              </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
+          <MDBCol md="12" className="mt-5">
+            <p style={{ textAlign: "center", fontSize:"small", opacity:"20%"}}>
+              Each time a language dies, another flame goes out, another sound
+              goes silent. - Ariel Sabar
+            </p>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
-          
         </MDBRow>
       </MDBContainer>
     </MDBFooter>

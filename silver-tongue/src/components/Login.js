@@ -67,7 +67,7 @@ export default function Login() {
         >
           <Col className="float-left ml-3">
             <Link to="/">
-              <i className="bi bi-x-lg float-left text-secondary"></i>
+              <i className="bi bi-x-lg float-left text-secondary up-front"></i>
             </Link>
           </Col>
         </Row>
@@ -113,7 +113,7 @@ export default function Login() {
               {/* add terms and conditions modal here */}
               <FormText color="muted" className="up-front">
                 By signing into Wernix, you agree to our{" "}
-                <Link
+                <Link className="up-front"
                   onClick={() => {
                     setModalOpen(true);
                     setPrivacyPolicy(false);
@@ -122,7 +122,7 @@ export default function Login() {
                   Terms
                 </Link>{" "}
                 and{" "}
-                <Link
+                <Link className="up-front"
                   onClick={() => {
                     setModalOpen(true);
                     setPrivacyPolicy(true);
