@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Col, Row, Button } from "reactstrap";
-import { NavBarMain, Footer } from "./";
+import { NavBarMain, FlyInAnimation, Footer } from "./";
 import {
   logo_gray_people,
   person_brain,
@@ -24,6 +24,22 @@ const styles = {
 };
 
 export default function Home(props) {
+ 
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScrolling);
+    return () => {
+      window.removeEventListener("scroll", handleScrolling);
+    };
+  }, []);
+
+  const [showItems, setShowItems] = useState(false);
+
+  // controls if login/signup are show depending on scrolling/where users is on page
+  function handleScrolling() {
+    var lang_carousel_position = document.getElementById("language-carousel").getBoundingClientRect();
+    lang_carousel_position.top <= 0 ? setShowItems(true) : setShowItems(false);
+  }
 
   // controls beginning of the language words going across the screen
   function createFlyInAnimation() {
@@ -39,25 +55,30 @@ export default function Home(props) {
     styles.slideOutRight.animation = `x ${_.random(8, 25)}s linear infinite`;
 
     return (
-      <p style={{ ...styles.slideOutRight }} className="language-word-fly-in">
+      <p
+        style={{ ...styles.slideOutRight }}
+        className="language-word-fly-in"
+        key={`${word}-${_.random(0, 1000)}`}
+      >
         {word}
       </p>
     );
   }
   return (
     <StyleRoot>
-      <NavBarMain />
+      <NavBarMain showItems={showItems} />
       {/* top half of page (language words fly-in and buttons) */}
-      <Container id="main" className="no-padding" fluid>
-        <Row id="main-page-background" className="no-margin bg-light">
+      <Container id="main" className="no-padding bg-light" fluid>
+        <Row id="main-page-background" className="no-margin">
           {createFlyInAnimation()}
+
           <Col md="5" className="no-padding">
             <div>
               <img
                 src={logo_gray_people}
-                alt="speech bubbles logo"
-                width="350"
-                height="350"
+                alt="people talking image"
+                width="75%"
+                // height="350"
               ></img>
             </div>
           </Col>
@@ -73,9 +94,11 @@ export default function Home(props) {
             <Row className="no-margin">
               <Col className="no-padding"></Col>
               <Col md="6" className="no-padding">
+                <Link to="register">
                 <Button className="main-page-button sign-up-button">
                   SIGN UP
                 </Button>
+                </Link>
               </Col>
               <Col className="no-padding"></Col>
             </Row>
@@ -95,6 +118,7 @@ export default function Home(props) {
         </Row>
         <div id="language-carousel"></div>
       </Container>
+      {/* {scrolling()} */}
 
       {/* bottom half of page (explanation of Wernix) */}
       <Container className="bg-light" style={{ width: "100vw" }} fluid>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   Container,
   Col,
@@ -15,7 +15,7 @@ import _ from "lodash";
 import { slideOutRight } from "react-animations";
 import { data } from "../util";
 import Radium, { StyleRoot } from "radium";
-import TermsAndPrivacyModal from "./TermsAndPrivacyModal";
+import {TermsAndPrivacyModal} from "./";
 
 // used for words flying across main page (top and animation are randomly set for each word)
 const styles = {
@@ -31,6 +31,8 @@ export default function Login() {
   const [modalOpen, setModalOpen] = useState(false);
   const [privacyPolicy, setPrivacyPolicy] = useState(false);
 
+  
+
   // controls beginning of the language words going across the screen
   function createFlyInAnimation() {
     let wordsToReturn = _.map(data.languageTranslationsArray, (word) =>
@@ -45,7 +47,11 @@ export default function Login() {
     styles.slideOutRight.animation = `x ${_.random(8, 25)}s linear infinite`;
 
     return (
-      <p style={{ ...styles.slideOutRight }} className="language-word-fly-in">
+      <p
+        style={{ ...styles.slideOutRight }}
+        className="language-word-fly-in"
+        key={`${word}-${_.random(0, 1000)}`}
+      >
         {word}
       </p>
     );
@@ -56,7 +62,7 @@ export default function Login() {
       {createFlyInAnimation()}
       {/* current users login form */}
       <Container
-        style={{ backgroundColor: "white" }}
+        // style={{ backgroundColor: "white" }}
         className="no-padding bg-light"
         id="main"
         fluid
@@ -104,16 +110,16 @@ export default function Login() {
               </FormGroup>
               <FormGroup row>
                 <Col>
-                  <Button className="main-page-button account-button up-front">
+                  <Button className="main-page-button account-button ">
                     LOG IN
                   </Button>
                 </Col>
               </FormGroup>
 
               {/* add terms and conditions modal here */}
-              <FormText color="muted" className="up-front">
+              <FormText color="muted" className="pos-rel up-front">
                 By signing into Wernix, you agree to our{" "}
-                <Link className="up-front"
+                <Link
                   onClick={() => {
                     setModalOpen(true);
                     setPrivacyPolicy(false);
@@ -122,7 +128,7 @@ export default function Login() {
                   Terms
                 </Link>{" "}
                 and{" "}
-                <Link className="up-front"
+                <Link
                   onClick={() => {
                     setModalOpen(true);
                     setPrivacyPolicy(true);
@@ -147,9 +153,11 @@ export default function Login() {
 
               <FormGroup row>
                 <Col>
+                <Link to="Register">
                   <Button className="main-page-button sign-up-button mt-2 up-front">
                     CREATE AN ACCOUNT
                   </Button>
+                  </Link>
                 </Col>
               </FormGroup>
             </Form>

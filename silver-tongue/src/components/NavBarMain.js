@@ -21,13 +21,22 @@ export default function NavBarMain(props) {
 
   return (
     // navbar for main homepage
-    // need to add buttons popup when scroll past top half of page
-    <Navbar color="dark" dark expand="md" fixed>
+    <Navbar color="dark" dark expand="md" fixed id="nav_bar_main">
       <NavbarBrand className="ml-3" href="/">WERNIX</NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
+        {props.showItems ? (
         <Nav className="mr-auto" navbar>
-        </Nav>
+          <NavItem>
+            <NavLink href="register">Sign Up</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="login">Log In</NavLink>
+          </NavItem>
+        </Nav>) : <Nav className="mr-auto" navbar></Nav>}
+        
+
+        
         <UncontrolledDropdown>
           <DropdownToggle nav caret style={{color: 'white'}}>
             Site Language: English
@@ -40,6 +49,7 @@ export default function NavBarMain(props) {
             <DropdownItem>Russian</DropdownItem>
           </DropdownMenu>
         </UncontrolledDropdown>
+        
       </Collapse>
     </Navbar>
   );

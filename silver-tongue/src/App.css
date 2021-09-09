@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #f8f9fa;
 }
 
 /* .navbar {
@@ -24,7 +25,7 @@
 
 #main {
   height: 100vh;
-  width: 100vw;
+  width: 99vw;
 }
 
 #main-page-background {
@@ -57,21 +58,30 @@
 .main-page-button {
   width: 100%;
   margin-bottom: 3%;
-  border-color: transparent !important;
   font-weight: 800 !important;
   position: relative;
   z-index: 4;
-  border-radius: .8rem !important;
+  border-radius: 0.8rem !important;
 }
 
 .sign-up-button {
   background-color: #8ad1a6 !important;
+  border-color: transparent !important;
+  color: white !important;
+}
+
+.sign-up-button:hover {
+  background-color: #476b55 !important;
 }
 
 .account-button {
   background-color: #1d5232 !important;
   border-color: transparent !important;
   color: white !important;
+}
+
+.account-button:hover {
+  background-color: #30744b !important;
 }
 
 #language-carousel {
@@ -81,7 +91,7 @@
   bottom: 0;
   height: 8%;
   z-index: 2;
-  background-color: #EBECED;
+  background-color: #ebeced;
   /* background-color: #8ad1a6; */
   /* height: 15%; */
   /* position: absolute;
@@ -89,18 +99,21 @@
   z-index: 2 */
 }
 
-.homepage-row{
+.homepage-row {
   margin: 0% 8% 4% 8% !important;
   /* margin-left: 8% !important;
   margin-right: 8% !important;
   margin-bottom: 4%; */
   border-bottom: 3px solid #8ad1a6;
   align-items: center;
-
 }
 
 .wernix-features {
   font-size: small;
+}
+
+.wernix-features-col {
+  text-align: left;
 }
 
 /* .checkmark {
@@ -108,38 +121,71 @@
 } */
 
 ul.no-bullet {
-list-style-type: none;
-padding: 0;
-margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 li.checkmark {
-background: url('/src/images/checkmark-small.png') no-repeat left top;
-height: 54px;
-padding-left: 40px;
-padding-top: 4px;
+  background: url("/src/images/checkmark-small.png") no-repeat left top;
+  height: 54px;
+  padding-left: 40px;
+  padding-top: 4px;
 }
 
 li.arrow-small {
-background: url('/src/images/arrow-small.png') no-repeat left 29px;
-/* height: 54px; */
-padding-left: 40px;
-padding-top: 29px;
-display: block;
+  background: url("/src/images/arrow-small.png") no-repeat left 29px;
+  /* height: 54px; */
+  padding-left: 40px;
+  padding-top: 29px;
+  display: block;
 }
 
-.wernix-features-col {
-  text-align: left;
+.modal-dialog {
+  overflow-y: initial !important;
 }
-
-.modal-dialog{
-    overflow-y: initial !important
-}
-.modal-body{
-    height: 50vh;
-    overflow-y: auto;
+.modal-body {
+  height: 60vh;
+  overflow-y: auto;
 }
 
 .up-front {
-  z-index: 10;
+  z-index: 5;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+ul a {
+  color: #8ad1a6;
+}
+ul a:hover {
+  color: #476b55;
+  text-decoration: none;
+}
+
+
+.register-form-label {
+  text-align: left;
+}
+
+.pass-wrapper {
+  position: relative;
+  display: flex;
+  margin-bottom: 14px;
+}
+
+.bi-eye-css {
+  position: absolute;
+  top: 12%;
+  right: 3%;
+}
+
+.MuiSlider-markLabel {
+  font-size: 0.5rem !important;
+}
+
+.icon-nav {
+  margin-right: 6px;
 }

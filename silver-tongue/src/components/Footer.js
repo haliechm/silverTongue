@@ -18,7 +18,7 @@ const FooterPagePro = () => {
               <h4>Practice speaking in other langauges today!</h4>
             </li>
             <li className="list-inline-item">
-              <Link className="btn btn-light btn-rounded account-button">
+              <Link to="register" className="btn btn-light btn-rounded sign-up-button">
                 Sign up
               </Link>
             </li>
@@ -50,14 +50,16 @@ const FooterPagePro = () => {
                 <a href="#!">About Us</a>
               </li>
               <li>
-                <Link to="/login">Log in to your Account</Link>
+                <Link to="login">Log in to your Account</Link>
               </li>
             </ul>
           </MDBCol>
           <MDBCol md="12" className="mt-5">
-            <p style={{ textAlign: "center", fontSize:"small", opacity:"20%"}}>
-              Each time a language dies, another flame goes out, another sound
-              goes silent. - Ariel Sabar
+            <p
+              style={{ textAlign: "center", fontSize: "small", opacity: "20%" }}
+            >
+              Language is a city to the building of which every human being has
+              brought a stone. — Ralph Waldo Emerson
             </p>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
